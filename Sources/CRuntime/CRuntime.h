@@ -16,9 +16,9 @@ void * callFunction(void *function,
                     void *data,
                     int size) {
 
-    typedef void * CastedFunction(u_char data[size]);
+    typedef void * CastedFunction(char data[size]);
 
-    u_char castedData[size];
+    char castedData[size];
     memcpy(&castedData, data, sizeof(castedData));
     CastedFunction *castedFunction = (CastedFunction *)(function);
     return castedFunction(castedData);
