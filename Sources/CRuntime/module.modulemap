@@ -1,5 +1,4 @@
 module CRuntime {
     header "CRuntime.h"
     export *
-    link "CRuntime.c"
 }
