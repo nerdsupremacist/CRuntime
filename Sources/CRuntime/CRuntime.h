@@ -18,9 +18,10 @@ void * _Nonnull callFunction(void * _Nonnull function,
     typedef void * CastedFunction(char data[size]);
 
     char castedData[size];
+
+    memset(&castedData, 0, sizeof(castedData));
     memcpy(&castedData, data, sizeof(castedData));
     CastedFunction *castedFunction = (CastedFunction *)(function);
     return castedFunction(castedData);
 }
-
 #endif
