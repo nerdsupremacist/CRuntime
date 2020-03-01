@@ -12,9 +12,9 @@ const void * _Nullable swift_allocObject(
                     int requiredSize,
                     int requiredAlignmentMask);
 
-void * callFunction(void *function,
-                    void *data,
-                    int size) {
+void * _Nonnull callFunction(void * _Nonnull function,
+                             void * _Nonnull data,
+                             int size) {
 
     typedef void * CastedFunction(char data[size]);
 
